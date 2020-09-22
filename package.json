@@ -5,8 +5,22 @@
   "main": "src/index",
   "private": true,
   "scripts": {
-	  "heroku-postbuild":"yarn factor build"
-   },
+    "heroku-postbuild":"yarn factor build"
+  },
+  "factor": {
+    "load": [ 
+	{
+          "app": "index",
+          "server": "server"
+     	}
+    ],
+    "app": {
+      "name": "proAdmin",
+      "description": "Es una aplicación web para la administración de proyectos. Te ayuda a gestionar documentacion, ingresos y egresos, atraves un control completo sobre la rentabilidad del proyecto.",
+      "url": "",
+      "email": "team@proadmin.com"
+    }
+  },	  
   "dependencies": {
     "@factor/core": "^1.0.0",
     "@factor/plugin-notify": "^1.0.0",
@@ -15,22 +29,5 @@
     "@factor/plugin-contact-form": "^1.0.0",
     "@factor/plugin-storage-s3": "^1.0.0",
 	"@factor/theme-zeno": "^1.8.26"
-  },
-  "factor": {
-    "app": {
-      "name": "proAdmin",
-      "description": "Es una aplicación web para la administración de proyectos. Te ayuda a gestionar documentacion, ingresos y egresos, atraves un control completo sobre la rentabilidad del proyecto.",
-      "url": "",
-      "email": "team@proadmin.com"
-    },
-    "admins": [
-      "robert_luffy@hotmail.com"
-    ],
-    "load": [ 
-	{
-      "app": "index",
-      "server": "server"
-     	}
-    ],
   }
 }
