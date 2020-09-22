@@ -26,9 +26,11 @@
     "admins": [
       "robert_luffy@hotmail.com"
     ],
-    "load": [
-      "app":"index",
-      "server":"server"
-    ]
+    "load": [ 
+	{
+      "app": "index",
+      "server": "server"
+     	}
+    ],
   }
 }
